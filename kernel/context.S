@@ -46,6 +46,7 @@ context_switch:
     sd t5, 232(a0)
     sd t6, 240(a0)
 
+
     # ---------- LOAD NEW CONTEXT ----------
 
     ld ra,   0(a1)
@@ -62,7 +63,7 @@ context_switch:
     ld s1,  64(a1)
 
     ld a0,  72(a1)
-    ld a1,  80(a1)
+    
     ld a2,  88(a1)
     ld a3,  96(a1)
     ld a4, 104(a1)
@@ -85,5 +86,7 @@ context_switch:
     ld t4, 224(a1)
     ld t5, 232(a1)
     ld t6, 240(a1)
+
+    ld a1,  80(a1)
 
     ret
